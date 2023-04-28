@@ -1,11 +1,10 @@
-function inArray(needle, haystack) {
-  for (let i = 0; i < haystack.length; i++) {
-    if (haystack[i] == needle) return true;
-  }
-  return false;
-}
 window.onload = function () {
-  document.getElementsByTagName("link")[2].href = "css/dark.css";
+  let darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+  if (darkTheme.matches) {
+    document.getElementsByTagName("link")[2].href = "css/dark.css";
+  } else {
+    document.getElementsByTagName("link")[2].href = "css/style.css";
+  }
 };
 let lightBtn = document.getElementById("light");
 lightBtn.onclick = function () {
@@ -15,6 +14,12 @@ let darkBtn = document.getElementById("dark");
 darkBtn.onclick = function () {
   document.getElementsByTagName("link")[2].href = "css/dark.css";
 };
+function inArray(needle, haystack) {
+  for (let i = 0; i < haystack.length; i++) {
+    if (haystack[i] == needle) return true;
+  }
+  return false;
+}
 let type = document.getElementById("type");
 let result = document.getElementById("result");
 let AC = document.getElementById("AC");
