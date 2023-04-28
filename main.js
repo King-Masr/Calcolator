@@ -9,3 +9,5 @@ let darkBtn = document.getElementById("dark");
 darkBtn.onclick = function () {
   document.getElementsByTagName("link")[2].href = "css/dark.css";
 };
+let type = document.getElementById("type");
+let result = document.getElementById("result");
