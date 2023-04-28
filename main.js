@@ -1,3 +1,9 @@
+function inArray(needle, haystack) {
+  for (let i = 0; i < haystack.length; i++) {
+    if (haystack[i] == needle) return true;
+  }
+  return false;
+}
 window.onload = function () {
   document.getElementsByTagName("link")[2].href = "css/dark.css";
 };
@@ -27,39 +33,73 @@ Del.onclick = function () {
 };
 let Percentsign = document.getElementById("Percentsign");
 Percentsign.onclick = function () {
-  if (type.innerText == 0) type.innerText = "";
-  type.innerText += "%";
+  if (result.innerText.length > 0 && result.innerText != 0) {
+    type.innerText = result.innerText;
+  }
+  if (type.innerText.length > 0 && type.innerText != 0) {
+    let Signs = ["%", "/", "*", "-", "+"];
+    if (!inArray(type.innerText.charAt(type.innerText.length - 1), Signs)) {
+      type.innerText += "%";
+    }
+  }
 };
 let Divisionsign = document.getElementById("Divisionsign");
 Divisionsign.onclick = function () {
-  if (type.innerText == 0) type.innerText = "";
-  type.innerText += "/";
+  if (result.innerText.length > 0 && result.innerText != 0) {
+    type.innerText = result.innerText;
+  }
+  if (type.innerText.length > 0 && type.innerText != 0) {
+    let Signs = ["%", "/", "*", "-", "+"];
+    if (!inArray(type.innerText.charAt(type.innerText.length - 1), Signs)) {
+      type.innerText += "/";
+    }
+  }
 };
 let Multiplicationsign = document.getElementById("Multiplicationsign");
 Multiplicationsign.onclick = function () {
-  if (type.innerText == 0) type.innerText = "";
-  type.innerText += "*";
+  if (result.innerText.length > 0 && result.innerText != 0) {
+    type.innerText = result.innerText;
+  }
+  if (type.innerText.length > 0 && type.innerText != 0) {
+    let Signs = ["%", "/", "*", "-", "+"];
+    if (!inArray(type.innerText.charAt(type.innerText.length - 1), Signs)) {
+      type.innerText += "*";
+    }
+  }
 };
 let Minussign = document.getElementById("Minussign");
 Minussign.onclick = function () {
-  if (type.innerText == 0) type.innerText = "";
-  type.innerText += "-";
+  if (result.innerText.length > 0 && result.innerText != 0) {
+    type.innerText = result.innerText;
+  }
+  if (type.innerText.length > 0 && type.innerText != 0) {
+    let Signs = ["%", "/", "*", "-", "+"];
+    if (!inArray(type.innerText.charAt(type.innerText.length - 1), Signs)) {
+      type.innerText += "-";
+    }
+  }
 };
 let Plussign = document.getElementById("Plussign");
 Plussign.onclick = function () {
-  if (type.innerText == 0) type.innerText = "";
-  type.innerText += "+";
+  if (result.innerText.length > 0 && result.innerText != 0) {
+    type.innerText = result.innerText;
+  }
+  if (type.innerText.length > 0 && type.innerText != 0) {
+    let Signs = ["%", "/", "*", "-", "+"];
+    if (!inArray(type.innerText.charAt(type.innerText.length - 1), Signs)) {
+      type.innerText += "+";
+    }
+  }
 };
-let Equalsign = document.getElementById("Equalsign"); // =============================
+let Equalsign = document.getElementById("Equalsign");
 Equalsign.onclick = function () {
-  if (type.innerText == 0) type.innerText = "";
-  type.innerText += "=";
+  result.innerText = eval(type.innerText);
 };
 let One = document.getElementById("One");
 One.onclick = function () {
   if (type.innerText == 0) type.innerText = "";
   type.innerText += 1;
-}
+};
 let Two = document.getElementById("Two");
 Two.onclick = function () {
   if (type.innerText == 0) type.innerText = "";
@@ -106,7 +146,7 @@ Zero.onclick = function () {
 };
 let DoubleZero = document.getElementById("DoubleZero");
 DoubleZero.onclick = function () {
-  if (type.innerText != 0) type.innerText += 00;
+  if (type.innerText != 0) type.innerText += "00";
 };
 let Dot = document.getElementById("Dot");
 Dot.onclick = function () {
