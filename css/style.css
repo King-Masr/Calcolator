@@ -26,14 +26,14 @@ a {
   text-decoration: none;
 }
 ul {
-  list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 /* Header */
 header {
-  margin: 20px auto 0;
   width: fit-content;
+  margin: 20px auto 0;
   align-items: center;
 }
 header main {
@@ -71,15 +71,16 @@ section#landing {
 }
 #landing #panel span {
   display: block;
-  text-align: end;
   font-weight: bold;
 }
 #landing #panel #type {
   font-size: 1em;
+  text-align: end;
   color: #353941;
 }
 #landing #panel #result {
   font-size: 3em;
+  text-align: start;
 }
 #landing #buttons {
   margin: auto;
@@ -124,12 +125,12 @@ section#landing {
   height: 50px;
   padding: 5px;
   cursor: pointer;
+  transition: 0.4s;
   user-select: none;
   text-align: center;
   border-radius: 10px;
   background-color: #f7f7f7;
   box-shadow: 0 0 3px #00000025;
-  transition: 0.4s;
 }
 #landing table td:hover {
   background-color: #e9e9e9;
