@@ -62,9 +62,8 @@ main {
 }
 /* Header */
 header {
-  width: fit-content;
+  width: max-content;
   margin: 20px auto 0;
-  align-items: center;
 }
 header main {
   display: flex;
@@ -125,7 +124,7 @@ section#landing {
 }
 #landing #buttons {
   margin: auto;
-  width: fit-content;
+  width: max-content;
 }
 #landing #buttons table {
   width: 500px;
