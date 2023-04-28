@@ -17,16 +17,44 @@ AC.onclick = function () {
   result.innerText = 0;
 };
 let Del = document.getElementById("Del");
+Del.onclick = function () {
+  if (type.innerText.length == 1) {
+    type.innerText = 0;
+  } else {
+    type.innerText = type.innerText.substring(0, type.innerText.length - 1);
+  }
+  result.innerText = 0;
+};
 let Percentsign = document.getElementById("Percentsign");
+Percentsign.onclick = function () {
+  if (type.innerText == 0) type.innerText = "";
+  type.innerText += "%";
+};
 let Divisionsign = document.getElementById("Divisionsign");
+Divisionsign.onclick = function () {
+  if (type.innerText == 0) type.innerText = "";
+  type.innerText += "/";
+};
 let Multiplicationsign = document.getElementById("Multiplicationsign");
 Multiplicationsign.onclick = function () {
   if (type.innerText == 0) type.innerText = "";
-  type.innerText += "×";
+  type.innerText += "*";
 };
 let Minussign = document.getElementById("Minussign");
+Minussign.onclick = function () {
+  if (type.innerText == 0) type.innerText = "";
+  type.innerText += "-";
+};
 let Plussign = document.getElementById("Plussign");
-let Equalsign = document.getElementById("Equalsign");
+Plussign.onclick = function () {
+  if (type.innerText == 0) type.innerText = "";
+  type.innerText += "+";
+};
+let Equalsign = document.getElementById("Equalsign"); // =============================
+Equalsign.onclick = function () {
+  if (type.innerText == 0) type.innerText = "";
+  type.innerText += "=";
+};
 let One = document.getElementById("One");
 One.onclick = function () {
   if (type.innerText == 0) type.innerText = "";
