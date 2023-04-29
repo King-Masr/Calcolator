@@ -155,5 +155,8 @@ DoubleZero.onclick = function () {
 };
 let Dot = document.getElementById("Dot");
 Dot.onclick = function () {
-  if (type.innerText != 0) type.innerText += ".";
+  let Signs = ["%", "/", "*", "-", "+"];
+  if (!inArray(type.innerText.charAt(type.innerText.length - 1), Signs)) {
+    if (type.innerText.charAt(type.innerText.length - 1) != ".") type.innerText += ".";
+  }
 };
