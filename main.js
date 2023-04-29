@@ -98,7 +98,7 @@ Plussign.onclick = function () {
 };
 let Equalsign = document.getElementById("Equalsign");
 Equalsign.onclick = function () {
-  result.innerText = eval(type.innerText);
+  if (type.innerText != "0") result.innerText = eval(type.innerText);
 };
 let One = document.getElementById("One");
 One.onclick = function () {
