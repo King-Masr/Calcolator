@@ -1,18 +1,18 @@
 window.onload = function () {
   let darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
   if (darkTheme.matches) {
-    document.getElementsByTagName("link")[2].href = "css/dark.css";
+    document.getElementsByTagName("link")[3].href = "css/dark.css";
   } else {
-    document.getElementsByTagName("link")[2].href = "css/style.css";
+    document.getElementsByTagName("link")[3].href = "css/style.css";
   }
 };
 let lightBtn = document.getElementById("light");
 lightBtn.onclick = function () {
-  document.getElementsByTagName("link")[2].href = "css/style.css";
+  document.getElementsByTagName("link")[3].href = "css/style.css";
 };
 let darkBtn = document.getElementById("dark");
 darkBtn.onclick = function () {
-  document.getElementsByTagName("link")[2].href = "css/dark.css";
+  document.getElementsByTagName("link")[3].href = "css/dark.css";
 };
 function inArray(needle, haystack) {
   for (let i = 0; i < haystack.length; i++) {
