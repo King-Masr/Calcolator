@@ -160,3 +160,59 @@ Dot.onclick = function () {
     if (type.innerText.charAt(type.innerText.length - 1) != ".") type.innerText += ".";
   }
 };
+// Add event listener on keypress
+document.addEventListener('keypress', (event) => {
+  switch (event.key) {
+    case "%":
+      Percentsign.click();
+      break;
+    case "/":
+      Divisionsign.click();
+      break;
+    case "*":
+      Multiplicationsign.click();
+      break;
+    case "-":
+      Minussign.click();
+      break;
+    case "+":
+      Plussign.click();
+      break;
+    case "Enter":
+      Equalsign.click();
+      break;
+    case "1":
+      One.click();
+      break;
+    case "2":
+      Two.click();
+      break;
+    case "3":
+      Three.click();
+      break;
+    case "4":
+      Four.click();
+      break;
+    case "5":
+      Five.click();
+      break;
+    case "6":
+      Six.click();
+      break;
+    case "7":
+      Saven.click();
+      break;
+    case "8":
+      Eight.click();
+      break;
+    case "9":
+      Nine.click();
+      break;
+    case "0":
+      Zero.click();
+      break;
+    case ".":
+      Dot.click();
+      break;
+  }
+}, false);
